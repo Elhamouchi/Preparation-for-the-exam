@@ -1,7 +1,11 @@
 <?php
 session_start();
-require_once __DIR__ . '/inc/flash.php';
+require_once __DIR__ . "/inc/flash.php";
+
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +15,7 @@ require_once __DIR__ . '/inc/flash.php';
     <title>PHP File Upload</title>
 </head>
 <body>
-
-
-
-<?php flash('upload') ?>
-
+  <?php flash("upload")?>
 <main>
     <form enctype="multipart/form-data" action="upload.php" method="post">
         <div>
