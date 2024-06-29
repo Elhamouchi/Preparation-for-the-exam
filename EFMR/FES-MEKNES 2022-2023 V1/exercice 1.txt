@@ -1,0 +1,29 @@
+1. Qu'est-ce que PHP ?
+	- Un langage de programmation côté serveur
+2. Quel outil est responsable de recevoir les requêtes HTTP et de traiter le code PHP présent dans les
+fichiers avant de renvoyer les résultats au navigateur du client ?
+
+3. Comment afficher le contenu d'une variable en PHP ?
+	b
+4. Quel est le symbole utilisé pour commencer un commentaire sur une seule ligne en PHP ? (1pt)
+	a) //
+	
+5. Soit $nombre=98.6, indiquez deux fonctions, parmi cette liste, qui permettent de rendre $nombre un
+entier qui vaut 98 : 
+	b) floor(98.6)
+	
+6. Sachant qu’aujourd’hui est le 12 Mai 2023, quel est le résultat de cette instruction : date("Y-m-d") (1pt)
+ 2023-05-12
+ 
+
+7. Quelle fonction est utilisée pour supprimer les espaces en début et fin d'une chaîne de caractères en
+PHP ? (1pt)
+a) trim()
+
+9. Comment accède-t-on à la valeur d'une clé spécifique dans un tableau associatif en PHP ?
+
+	d) $tableau[clé]
+	
+9. Soit l’affectation suivante : $chaine= "" ;
+La fonction isset($chaine) retournera : (1pt)
+a) true
