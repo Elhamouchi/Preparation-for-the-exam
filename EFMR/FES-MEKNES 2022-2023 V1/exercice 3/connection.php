@@ -1,6 +1,6 @@
 <?php
 
-  $dsn = "mysql:host=localhost;dbname=entre_formation";
+  $dsn = "mysql:host=localhost;dbname=centre_formation";
   $user = "root";
   $pass = "";
   try {
@@ -11,4 +11,3 @@
     echo $e->getMessage();
   }
 
-  

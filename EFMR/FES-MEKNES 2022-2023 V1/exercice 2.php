@@ -50,7 +50,9 @@ class Compte{
 
     if($stmt->rowCount() > 0){
       $cmpt = $stmt->fetch(PDO::FETCH_OBJ);
-      if(!$cmpt->etat === "true"){
+      var_dump($cmpt->etat);
+      
+      if($cmpt->etat === "1"){
         session_start();
         $_SESSION["login"] = $login;
         return true;
