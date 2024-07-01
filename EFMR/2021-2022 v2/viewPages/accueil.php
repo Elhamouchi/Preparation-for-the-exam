@@ -8,7 +8,11 @@ include_once  "../inc/templetes/navbar.php" ;
 
 check_session();
 
-$message =(int)date('h') > 12? "bonsiore": "bonjour";
+$message = "Bonjour";
+
+if((int)date('H') > 12){
+    $message = "Bonsoir";
+}
 $message .= " "  . $_SESSION["user"]["nom"];
 
 $products = getProducts();
