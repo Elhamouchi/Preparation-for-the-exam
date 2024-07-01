@@ -1,9 +1,8 @@
 <?php
-// session_Start();
+session_Start();
 include "../inc/templetes/header.php";
 include "../inc/functions/flash.php";
 
-// header("location: accueil.php")
 ?>
 
 
