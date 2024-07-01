@@ -1,4 +1,5 @@
 <?php
+  include "../inc/functions/db.php";
   include "../inc/config/conf-validat.php";
   /**
    * check if a email is valid
@@ -84,8 +85,7 @@
   function is_a_valid_date(string $date){
     $date = trim($date);
     if(preg_match("/^[0-9]{4}[\/\-][0-9]{1,2}[\/\-][0-9]{1,2}$/", $date)){
-
-      list($year, $month, $day) = preg_split("/\-\//", $date);
+      list($year, $month, $day) = preg_split("/[\-\/]/", $date);
       if(checkdate($month, $day, $year)){
         return true;
       }
@@ -100,4 +100,39 @@
       return false;
     }
     return true;
+  }
+
+
+  /**
+   * check a file if is a valid 
+   * 
+   * @param array $file from $_FILES
+   * 
+   * @return string | bool
+   */
+  function is_a_valid_file(array $file):string | bool{
+    $f_size = $file["size"];
+    $f_type = pathinfo($file["name"])["extension"];
+    $f_erorr = $file["error"];
+
+    if($f_erorr != 0){
+      return MESSAGES[$f_erorr];
+    }
+
+    if($f_size > MAX_SIZE){
+      return 'Error! your file size is ' . $f_size . ' , which is bigger than allowed size ';
+    }
+
+    if(array_search($f_type, ALLOWED_FILES, true) === false){
+      return 'The file type is not allowed to upload';
+    }
+    return true;
+  }
+
+  function is_a_valid_categorie($categorie){
+    $categories = getCategories(); 
+    print_r($categorie);
+    echo "<br>";
+    print_r($categories);
+    return is_a_valid_select($categorie, $categories);
   }

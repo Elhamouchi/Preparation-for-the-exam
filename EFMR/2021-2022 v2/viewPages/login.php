@@ -3,10 +3,7 @@
 include "../inc/templetes/header.php";
 include "../inc/functions/flash.php";
 
-
-echo "<pre>";
-print_r($_SESSION);
-echo"</pre>";
+// header("location: accueil.php")
 ?>
 
 

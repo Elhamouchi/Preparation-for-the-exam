@@ -27,7 +27,7 @@ function create_flash_message(string $name, string $message, string $type): void
  * @return string
  */
 function format_flash_message(array $flash_message): string{
-  return sprintf("<div class='alert alert-%s'>%s</div>",  $flash_message["type"], $flash_message["message"]);
+  return sprintf('<div class="alert alert-%s">%s</div>',  $flash_message["type"], $flash_message["message"]);
 }   
 
 /**
