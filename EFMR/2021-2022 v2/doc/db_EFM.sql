@@ -1,4 +1,4 @@
-CREATE DATABASE gestionproduit_ve;
+CREATE DATABASE gestionproduit_v2;
 USE gestionproduit_ve;
 
 CREATE TABLE Categorie(
